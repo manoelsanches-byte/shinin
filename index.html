@@ -47,16 +47,21 @@
                        <p class="artigo-doutor">por: Shinin/moiese</p>
                        <p>Boas-vindas ao meu primeiro site aonde mostrarei ideias de sistemas de RPG diferenciados.</p>
                        <button> ❤️ <span>0</span​></button>
+                       <button> 🤌​ <span>0</span​></button>
                      </div>
                 </main>
 </body>
 <script>
-     const Botao = document.querySelector("button")
-     Botao.addEventListener("click", BotaoClicado);
-     function BotaoClicado(){
-        console.log("fui clicado");
-         let texto = Botao.querySelector("span")
-         texto.textContent++;
-     }
+     const Botoes = document.querySelector("button");
+     Botoes.forEach( function(Botao){
+         Botao.addEventListener("click", BotaoClicado);
+         function BotaoClicado(){
+             console.log("fui clicado");
+             let texto = Botao.querySelector("span")
+             texto.textContent++;
+            }
+        })
+        
+        
 </script>
 </html>
