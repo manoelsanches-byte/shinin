@@ -6,7 +6,33 @@
         content="width=device-width, initial-scale=1.0">
         <title>maionese com RPG</title>
         <link rel="stylesheet" href="Stylout.css">
-       
+       <style>
+           {
+                background-color: #6A2467;
+                color: #FFFFFF;
+                text-align: center;
+                max-width: 900px;
+                margin: 0 auto;
+                padding: 0 auto;
+                border: 5px solid 
+                #cf1010;
+            }
+            main{
+                background-color:#FFFFFF ;
+                color: #6A2467;
+                max-width: 900px;
+                margin: 0 auto;
+                padding: 16px;
+            }
+            img{
+                width: 80px;
+                height: 80px;
+            }           
+             .artogo-autor p{
+                font-weight: bold;
+                
+            }
+       </style>
     </head>
     <body> 
       <header>
@@ -45,4 +71,24 @@
 
                 <script src="script.js"></script>
 </body>
+<script>
+       const Botoes = document.querySelectorAll("button");
+        
+        Botoes.forEach( function(Botao) {
+            let curtiu = false;
+         Botao.addEventListener("click", BotaoClicado);
+         function BotaoClicado(){
+             console.log("fui clicado");
+             let texto = Botao.querySelector("span");
+             if (curtiu === false){
+                 texto.textContent++;
+                 curtiu = true;
+             } else {
+              texto.textContent --;
+              curtiu = false;
+             }
+
+            }
+        })
+</script>
 </html>
